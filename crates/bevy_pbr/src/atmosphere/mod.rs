@@ -204,6 +204,7 @@ pub fn extract_atmosphere(
         values.push((
             entity,
             ExtractedAtmosphere {
+                world_position: item.world_position,
                 bottom_radius: item.bottom_radius,
                 top_radius: item.top_radius,
                 ground_albedo: item.ground_albedo,
@@ -219,6 +220,7 @@ pub fn extract_atmosphere(
 /// hasn't been converted into shader uniforms yet.
 #[derive(Clone, Component)]
 pub struct ExtractedAtmosphere {
+    pub world_position: Vec3,
     pub bottom_radius: f32,
     pub top_radius: f32,
     pub ground_albedo: Vec3,

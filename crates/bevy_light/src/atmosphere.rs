@@ -13,6 +13,9 @@ use smallvec::SmallVec;
 #[derive(Clone, Component)]
 #[require(Hdr)]
 pub struct Atmosphere {
+    /// Position of the planet in the world.
+    pub world_position: Vec3,
+
     /// Radius of the planet
     ///
     /// units: m
