@@ -45,6 +45,7 @@ impl Atmosphere {
         const EARTH_TOP_RADIUS: f32 = 6_460_000.0;
         const EARTH_ALBEDO: Vec3 = Vec3::splat(0.3);
         Self {
+            world_position: Vec3::ZERO,
             bottom_radius: EARTH_BOTTOM_RADIUS,
             top_radius: EARTH_TOP_RADIUS,
             ground_albedo: EARTH_ALBEDO,
